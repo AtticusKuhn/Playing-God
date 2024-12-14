@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bng3qw4r2kpxf"]
+
+[ext_resource type="Shape2D" uid="uid://ded08ljfu8xy0" path="res://person_shape.tres" id="1_dsjo3"]
+[ext_resource type="Script" path="res://Person.gd" id="1_pjb0e"]
+[ext_resource type="Texture2D" uid="uid://c4h3very88iyw" path="res://punk1.png" id="2_1y4y6"]
+
+[node name="Person" type="Area2D"]
+script = ExtResource("1_pjb0e")
+
+[node name="AgeLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Name" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("1_dsjo3")
+
+[node name="LocationLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Punk1" type="Sprite2D" parent="."]
+position = Vector2(20, 21)
+scale = Vector2(0.29541, 0.314453)
+texture = ExtResource("2_1y4y6")

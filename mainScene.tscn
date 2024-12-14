@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://biassyuho1jgq"]
+
+[ext_resource type="Texture2D" uid="uid://dctwk6vl0lvdk" path="res://earth.png" id="1_p8xgq"]
+[ext_resource type="Script" path="res://mainScene.gd" id="1_qgo1l"]
+[ext_resource type="PackedScene" uid="uid://bng3qw4r2kpxf" path="res://Person.tscn" id="1_xkqyn"]
+[ext_resource type="Script" path="res://Panel.gd" id="3_eug6k"]
+[ext_resource type="Script" path="res://PrayerPanel.gd" id="4_tpgqm"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_qgo1l")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.905, 0.905)
+
+[node name="Earth" type="Sprite2D" parent="."]
+texture = ExtResource("1_p8xgq")
+
+[node name="People" type="Node2D" parent="."]
+
+[node name="Person" parent="People" instance=ExtResource("1_xkqyn")]
+position = Vector2(-369, 244)
+
+[node name="Person2" parent="People" instance=ExtResource("1_xkqyn")]
+position = Vector2(340, -31)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PrayerLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="InfoPanel" type="Panel" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_eug6k")
+
+[node name="PrayerPanel" type="Panel" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 74.0
+offset_top = 188.0
+offset_right = 74.0
+offset_bottom = 188.0
+script = ExtResource("4_tpgqm")
+
+[node name="Name" type="Label" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="AgeLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LocationLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 194.0
+offset_right = 118.0
+offset_bottom = 217.0
+
+[node name="RespondButton" type="Button" parent="UI"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="ResponseDropdown" type="OptionButton" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = 190.0
+offset_right = 69.0
+offset_bottom = 170.0
