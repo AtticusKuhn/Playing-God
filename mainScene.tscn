@@ -10,7 +10,7 @@
 script = ExtResource("1_qgo1l")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.905, 0.905)
+zoom = Vector2(1.2, 1.2)
 
 [node name="Earth" type="Sprite2D" parent="."]
 texture = ExtResource("1_p8xgq")
@@ -35,9 +35,16 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="InfoPanel" type="Panel" parent="UI"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.121
+anchor_top = 8.259
+anchor_right = 11.246
+anchor_bottom = 11.246
+offset_left = 102.16
+offset_top = -42.36
+offset_right = -22.84
+offset_bottom = -61.84
 script = ExtResource("3_eug6k")
 
 [node name="PrayerPanel" type="Panel" parent="UI"]
@@ -47,19 +54,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 74.0
 offset_top = 188.0
-offset_right = 74.0
-offset_bottom = 188.0
+offset_right = 462.0
+offset_bottom = 433.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("4_tpgqm")
 
 [node name="Name" type="Label" parent="UI"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 268.0
+offset_top = 203.0
+offset_right = 383.0
+offset_bottom = 254.0
 
 [node name="AgeLabel" type="Label" parent="UI"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 143.0
+offset_top = 177.0
+offset_right = 319.0
+offset_bottom = 275.0
 
 [node name="LocationLabel" type="Label" parent="UI"]
 layout_mode = 0
@@ -78,7 +91,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 64.0
-offset_top = 190.0
-offset_right = 69.0
-offset_bottom = 170.0
+offset_left = 95.0
+offset_top = 219.0
+offset_right = 193.0
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 2

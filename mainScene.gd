@@ -7,7 +7,7 @@ func _ready():
 	for person in $People.get_children():
 		print(person)
 		person.person_clicked.connect(self._on_person_clicked)
-		
+		person.prayer_sent.connect(self._on_prayer_sent)
 		#person.connect("person_clicked", self, "_on_person_clicked")
 		#person.connect("prayer_sent", self._on_prayer_sent)
 	info_panel.hide()

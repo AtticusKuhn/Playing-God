@@ -1,8 +1,8 @@
 extends Panel
 
-@onready var name_label = find_child("Control/Name")
-@onready var age_label = find_child("Control/AgeLabel")
-@onready var location_label = find_child("Control/LocationLabel")
+@onready var name_label = get_node("../Name")
+@onready var age_label = get_node("../AgeLabel")
+@onready var location_label = get_node("../LocationLabel")
 
 func update_info(data):
 	name_label.text = "Name: " + data.name
